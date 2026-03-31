@@ -32,27 +32,18 @@
         .nav-phone { font-weight: 700; color: var(--white); background: var(--primary); text-decoration: none; padding: 10px 25px; border-radius: 8px; transition: 0.3s; white-space: nowrap; }
         .nav-phone:hover { background: var(--accent); transform: scale(1.05); }
 
-        /* Hero Section with Built-in CSS Texture */
+        /* Hero Section with Dynamic Photo (Guaranteed No People/Texas Tough) */
         .hero {
             height: 85vh; min-height: 500px;
             background-color: var(--primary-dark);
-            /* Built-in geometric texture that never breaks */
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a373' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            /* A massive Texas Oak, overlayed with the primary dark green, and linear texture */
+            background-image: 
+                linear-gradient(rgba(13, 43, 31, 0.7), rgba(13, 43, 31, 0.8)),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a373' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4h6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+                url('https://loremflickr.com/1600/900/texas,oak,tree/all');
+            background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white);
             padding: 0 20px; position: relative;
-        }
-        
-        /* Large subtle background icon */
-        .hero::before {
-            content: '\f1bb'; /* Tree icon */
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            font-size: 40vw;
-            color: rgba(255,255,255,0.03);
-            z-index: 0;
-            right: -5%;
-            bottom: -10%;
         }
 
         .hero-inner { max-width: 900px; margin-top: 60px; position: relative; z-index: 1; }
@@ -74,7 +65,7 @@
         .card { border-radius: 20px; overflow: hidden; background: var(--white); transition: 0.3s; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
         .card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); border-color: var(--accent); }
         
-        /* Graphic Placeholders instead of photos */
+        /* Graphic Placeholders (No people) */
         .card-graphic { height: 200px; width: 100%; background-color: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--accent); position: relative; overflow: hidden; }
         .card-graphic::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"); }
         .card-graphic i { font-size: 5rem; position: relative; z-index: 1; transition: 0.4s; }
@@ -84,15 +75,14 @@
         .card-body h3 { margin-bottom: 15px; font-size: 1.5rem; color: var(--primary); }
         .card-body p { font-size: 1rem; color: #555; }
 
-        /* Feature Split */
-        .split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 8%; background: var(--white); color: var(--dark); }
+        /* Section 2 Split (Shield graphic block removed, content now centers) */
+        .split { padding: 100px 8%; background: var(--white); color: var(--dark); display: flex; justify-content: center; }
+        .split-content { max-width: 800px; text-align: center; } /* Centered text content */
         
-        .split-graphic { height: 500px; width: 100%; border-radius: 30px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(27, 67, 50, 0.2); }
-        .split-graphic::after { content: ''; position: absolute; width: 200%; height: 200%; background-image: radial-gradient(var(--accent) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.1; transform: rotate(45deg); }
-        .split-graphic i { font-size: 12rem; color: var(--accent); opacity: 0.8; position: relative; z-index: 1; }
-
         .split-content h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 20px; color: var(--primary); }
-        .feature-box { margin-bottom: 30px; display: flex; gap: 20px; }
+        
+        /* Centered features grid on mobile, standard grid on desktop */
+        .feature-box { margin-bottom: 30px; display: flex; gap: 20px; text-align: left; align-items: start;}
         .feature-box i { font-size: 1.5rem; color: var(--accent); margin-top: 5px; min-width: 30px; }
         .feature-box h3 { font-size: 1.3rem; margin-bottom: 5px; color: var(--primary); }
         .feature-box p { color: #555; font-size: 0.95rem; }
@@ -115,9 +105,12 @@
 
         /* Mobile & Tablet Responsiveness */
         @media (max-width: 900px) {
-            .split { grid-template-columns: 1fr; gap: 40px; padding: 80px 5%; }
-            .split-graphic { height: 350px; order: -1; }
-            .split-graphic i { font-size: 8rem; }
+            .split { padding: 80px 5%; }
+            .split-content { max-width: 100%; }
+            
+            /* Center-align feature boxes on mobile */
+            .feature-box { flex-direction: column; gap: 10px; text-align: center; align-items: center; }
+            .feature-box i { margin-top: 0; }
         }
 
         @media (max-width: 768px) {
@@ -129,13 +122,11 @@
             .content-wrap, .reviews { padding: 60px 5%; }
             .section-header { margin-bottom: 40px; }
             
-            .feature-box { flex-direction: column; gap: 10px; }
-            .feature-box i { margin-top: 0; }
-            
             footer { padding: 60px 5% 30px; }
         }
 
         @media (max-width: 480px) {
+            /* Mobile header fixes */
             .logo span { display: none; }
             .logo::after { content: "MONKEY TREE SERVICE"; }
             .nav-phone { padding: 8px 12px; font-size: 0.85rem; }
@@ -196,9 +187,6 @@
     </section>
 
     <section class="split">
-        <div class="split-graphic">
-            <i class="fas fa-shield-alt"></i>
-        </div>
         <div class="split-content">
             <h2>You Get What You Pay For.</h2>
             <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); margin-bottom: 40px; color: var(--primary);">We aren't the cheapest because we don't cut corners. We focus on quality equipment, Texas-tough work ethic, and flawless execution.</p>
