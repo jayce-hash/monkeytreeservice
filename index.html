@@ -25,15 +25,16 @@
             padding: 15px 8%; display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .logo { font-weight: 900; font-size: 1.4rem; color: var(--primary); letter-spacing: -1px; }
+        .logo { font-weight: 900; font-size: 1.2rem; color: var(--primary); letter-spacing: -0.5px; text-transform: uppercase; }
         .nav-phone { font-weight: 700; color: var(--white); background: var(--primary); text-decoration: none; padding: 10px 25px; border-radius: 8px; transition: 0.3s; white-space: nowrap; }
         .nav-phone:hover { background: var(--accent); transform: scale(1.05); }
 
         /* Hero Section */
         .hero {
             height: 85vh; min-height: 500px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=2000');
+            /* Updated to a large, spreading Oak tree typical of Texas */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1588628566587-f1c50e2ae4c1?auto=format&fit=crop&q=80&w=2000');
             background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white);
             padding: 0 20px;
@@ -62,7 +63,8 @@
 
         /* Feature Split */
         .split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 8%; background: var(--dark); color: var(--white); }
-        .split-img { height: 600px; width: 100%; border-radius: 30px; background: url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center; border: 10px solid rgba(255,255,255,0.05); }
+        /* Updated to fresh cut logs/firewood showing cleanup */
+        .split-img { height: 600px; width: 100%; border-radius: 30px; background: url('https://images.unsplash.com/photo-1610427618991-3c6cc810d7a0?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center; border: 10px solid rgba(255,255,255,0.05); }
         .split-content h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 20px; }
         .feature-box { margin-bottom: 30px; display: flex; gap: 20px; }
         .feature-box i { font-size: 1.5rem; color: var(--accent); margin-top: 5px; min-width: 30px; }
@@ -86,12 +88,12 @@
         /* Mobile & Tablet Responsiveness */
         @media (max-width: 900px) {
             .split { grid-template-columns: 1fr; gap: 40px; padding: 80px 5%; }
-            .split-img { height: 400px; order: -1; } /* Puts image above text on mobile */
+            .split-img { height: 400px; order: -1; }
         }
 
         @media (max-width: 768px) {
             nav { padding: 15px 5%; }
-            .logo { font-size: 1.1rem; }
+            .logo { font-size: 1rem; }
             .nav-phone { padding: 8px 16px; font-size: 0.9rem; }
             
             .content-wrap, .reviews { padding: 60px 5%; }
@@ -105,9 +107,8 @@
         }
 
         @media (max-width: 480px) {
-            .logo span { display: none; } /* On extremely small screens, just show 'MONKEY' or keep it tight */
-            .logo::after { content: "MONKEY TREE"; }
-            .logo { font-size: 1.2rem; }
+            .logo span { display: none; }
+            .logo::after { content: "MONKEY TREE SERVICE"; }
             .hero { height: 75vh; }
         }
     </style>
@@ -115,7 +116,7 @@
 <body>
 
     <nav>
-        <div class="logo">MONKEY TREE</div>
+        <div class="logo">Monkey Tree Service & Stump Grinding</div>
         <a href="tel:8179199105" class="nav-phone"><i class="fas fa-phone-alt"></i> 817-919-9105</a>
     </nav>
 
@@ -123,7 +124,7 @@
         <div class="hero-inner">
             <p>PROFESSIONAL TREE & STUMP CARE</p>
             <h1>Fort Worth's Elite Tree Crew.</h1>
-            <p>Safe, efficient, and thorough tree removal for homes across North Texas. Tyler and the team handle the jobs others won't touch.</p>
+            <p>Safe, efficient, and thorough tree removal for homes across North Texas. Tyler and the team handle the massive oaks and tricky jobs others won't touch.</p>
             <a href="tel:8179199105" class="cta">Get Your Free Quote</a>
         </div>
     </section>
@@ -135,24 +136,24 @@
         </div>
         <div class="grid">
             <div class="card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1596438676690-337c8051754f?auto=format&fit=crop&q=80&w=800');"></div>
                 <div class="card-body">
                     <h3>Tree Removal</h3>
-                    <p>From dead willows to massive 80-year-old oaks, we specialize in high-risk removals near houses and power lines.</p>
+                    <p>From dead willows to massive 80-year-old live oaks, we specialize in high-risk removals near houses, fences, and power lines.</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1611105637889-3e3e3b3240e3?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1590680425712-ae2abdf96b2c?auto=format&fit=crop&q=80&w=800');"></div>
                 <div class="card-body">
                     <h3>Stump Grinding</h3>
-                    <p>We use commercial-grade grinders to turn unsightly stumps into level ground, leaving your yard ready for new landscaping.</p>
+                    <p>We use commercial-grade grinders to turn unsightly stumps into level ground, leaving your Texas yard ready for new sod or landscaping.</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1558693165-4f489f0de36b?auto=format&fit=crop&q=80&w=800');"></div>
                 <div class="card-body">
                     <h3>Strategic Trimming</h3>
-                    <p>Precision pruning to clear rooflines, remove hazardous limbs, and restore the natural beauty of your property.</p>
+                    <p>Precision pruning to clear rooflines, remove hazardous limbs hanging over your home, and restore the natural beauty of your property.</p>
                 </div>
             </div>
         </div>
@@ -162,27 +163,27 @@
         <div class="split-img"></div>
         <div class="split-content">
             <h2>You Get What You Pay For.</h2>
-            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); margin-bottom: 40px; opacity: 0.8;">We aren't the cheapest because we don't cut corners. We focus on quality equipment and flawless execution.</p>
+            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); margin-bottom: 40px; opacity: 0.8;">We aren't the cheapest because we don't cut corners. We focus on quality equipment, Texas-tough work ethic, and flawless execution.</p>
             
             <div class="feature-box">
                 <i class="fas fa-bolt"></i>
                 <div>
                     <h3>Lightning Fast Execution</h3>
-                    <p>Our crew is known for speed. We've completed removals in 2 days that took other companies over a week.</p>
+                    <p>Our crew is known for speed. We've completed massive oak removals in 2 days that took other companies over a week.</p>
                 </div>
             </div>
             <div class="feature-box">
                 <i class="fas fa-broom"></i>
                 <div>
                     <h3>Meticulous Cleanup</h3>
-                    <p>We don't leave a mess. When we finish, your yard is clean, hauled away, and ready for use.</p>
+                    <p>We don't leave a mess. When we finish, your yard is completely cleared of logs and branches, hauled away, and ready for use.</p>
                 </div>
             </div>
             <div class="feature-box">
                 <i class="fas fa-shield-check"></i>
                 <div>
                     <h3>Flawless Safety Record</h3>
-                    <p>Taking down trees above houses is "scary" for some—for Tyler, it's just another day at the office.</p>
+                    <p>Taking down large trees leaning over houses is "scary" for some—for Tyler, it's just another day at the office.</p>
                 </div>
             </div>
         </div>
@@ -195,7 +196,7 @@
         </div>
         <div class="rev-grid">
             <div class="rev-card">
-                <p>"Removed 2 massive live oaks in 2 days start to finish!! I watched a crew across the street take three days on one tree. Fast and efficient."</p>
+                <p>"Removed and stump ground 2 massive live oaks in 2 days start to finish!! I watched a crew across the street take three days on one tree. Fast and efficient."</p>
                 <div class="name">Tony Martinez</div>
             </div>
             <div class="rev-card">
