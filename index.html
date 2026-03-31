@@ -25,15 +25,15 @@
             padding: 15px 8%; display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .logo { font-weight: 900; font-size: 1.2rem; color: var(--primary); letter-spacing: -0.5px; text-transform: uppercase; }
+        .logo { font-weight: 900; font-size: 1.2rem; color: var(--primary); letter-spacing: -0.5px; text-transform: uppercase; line-height: 1.2; }
         .nav-phone { font-weight: 700; color: var(--white); background: var(--primary); text-decoration: none; padding: 10px 25px; border-radius: 8px; transition: 0.3s; white-space: nowrap; }
         .nav-phone:hover { background: var(--accent); transform: scale(1.05); }
 
         /* Hero Section */
         .hero {
             height: 85vh; min-height: 500px;
-            background-color: var(--primary); /* Safe Fallback Color */
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://loremflickr.com/1600/900/texas,oak,tree/all');
+            background-color: var(--primary); 
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=2000');
             background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white);
             padding: 0 20px;
@@ -62,7 +62,7 @@
 
         /* Feature Split */
         .split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 8%; background: var(--dark); color: var(--white); }
-        .split-img { height: 600px; width: 100%; border-radius: 30px; background-color: var(--accent); background-image: url('https://loremflickr.com/800/800/logs,wood/all'); background-size: cover; background-position: center; border: 10px solid rgba(255,255,255,0.05); }
+        .split-img { height: 600px; width: 100%; border-radius: 30px; background-color: var(--accent); background-image: url('https://images.unsplash.com/photo-1610427618991-3c6cc810d7a0?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center; border: 10px solid rgba(255,255,255,0.05); }
         .split-content h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 20px; }
         .feature-box { margin-bottom: 30px; display: flex; gap: 20px; }
         .feature-box i { font-size: 1.5rem; color: var(--accent); margin-top: 5px; min-width: 30px; }
@@ -104,9 +104,10 @@
             footer { padding: 60px 5% 30px; }
         }
 
+        /* FIXED MOBILE HEADER - Removed the repeating text bug line */
         @media (max-width: 480px) {
-            .logo span { display: none; }
-            .logo::after { content: "MONKEY TREE SERVICE"; }
+            .logo { font-size: 0.85rem; max-width: 150px; }
+            .nav-phone { padding: 8px 12px; font-size: 0.85rem; }
             .hero { height: 75vh; }
         }
     </style>
@@ -134,21 +135,21 @@
         </div>
         <div class="grid">
             <div class="card">
-                <div class="card-img" style="background-image: url('https://loremflickr.com/600/400/tree,removal/all');"></div>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=800');"></div>
                 <div class="card-body">
                     <h3>Tree Removal</h3>
                     <p>From dead willows to massive 80-year-old live oaks, we specialize in high-risk removals near houses, fences, and power lines.</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image: url('https://loremflickr.com/600/400/tree,stump/all');"></div>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1611105637889-3e3e3b3240e3?auto=format&fit=crop&q=80&w=800');"></div>
                 <div class="card-body">
                     <h3>Stump Grinding</h3>
                     <p>We use commercial-grade grinders to turn unsightly stumps into level ground, leaving your Texas yard ready for new sod or landscaping.</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image: url('https://loremflickr.com/600/400/tree,pruning/all');"></div>
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&q=80&w=800');"></div>
                 <div class="card-body">
                     <h3>Strategic Trimming</h3>
                     <p>Precision pruning to clear rooflines, remove hazardous limbs hanging over your home, and restore the natural beauty of your property.</p>
